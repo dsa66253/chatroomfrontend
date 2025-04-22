@@ -8,9 +8,9 @@ export const OnlineUser = ()=>{
             console.log("user", user)
             setOnlineUsers(user)
         }
-        socket.on('onlineUserList', onOnlineUser);
+        socket.on('online_user_list', onOnlineUser);
         return () => {
-            socket.off('onlineUserList', onOnlineUser);
+            socket.off('online_user_list', onOnlineUser);
         };
     }, []);
     return (

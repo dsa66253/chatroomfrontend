@@ -20,7 +20,7 @@ export default function App() {
   console.log("App render");
   const addUser = (aaa) => {
     const user = { id:id, name:name };
-    socket.emit("onlineUserList", "add", user);
+    socket.emit("online_user_list", "add", user);
   };
 
   useEffect(() => {

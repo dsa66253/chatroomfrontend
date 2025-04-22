@@ -4,12 +4,12 @@ import { useEffect } from 'react';
 export const RoomList = ({ rooms, setActiveRoomName, activeRoomName }) => {
   const enterRoom = (roomName)=>{
     if (activeRoomName !== roomName) {
-      socket.emit("joinRoom", roomName);
+      socket.emit("join_room", roomName);
       setActiveRoomName(roomName);
     }
   }
   useEffect(() => {
-    socket.emit("joinRoom", activeRoomName);
+    socket.emit("join_room", activeRoomName);
   }
   , []);
   return (
